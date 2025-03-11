@@ -5,7 +5,9 @@ export default function Footer(){
     
     return(
     <footer className={styles.footer}>
-      <p>© {new Date().getFullYear()} Pixel&Code. Todos los derechos reservados.</p>
-    </footer>   
+      <div className={styles.container}>
+        <p>&copy; {new Date().getFullYear()} Pixel&Code. Todos los derechos reservados.</p>
+      </div>
+    </footer>
     )
 }

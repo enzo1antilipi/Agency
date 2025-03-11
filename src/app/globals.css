@@ -24,3 +24,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0px;
 }
+main {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
