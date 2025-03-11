@@ -1,0 +1,9 @@
+.footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+  color: white; /* Texto en blanco */
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+}

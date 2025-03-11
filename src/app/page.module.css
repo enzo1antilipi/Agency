@@ -1,168 +1,211 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
+.imgContainer {
+  max-height: 600px; /* Ajusta la altura máxima según necesites */
+  overflow: hidden;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+ .imgHome { 
+  object-fit: cover; 
+  object-position: top; 
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+} 
+.overlay {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad según necesites */
+  margin: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+/* Contenedor del texto y los botones */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%;
 }
 
-.main {
+
+.buttonContainer {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
+.button {
+  padding: 10px 20px;
   border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.buttonContact {
+  padding: 10px 20px;
+  border: none;
+  background: var(--acento, rgba(130, 255, 31, 1));
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.button:hover {
+  background: #ddd;
+}
+/* -------------------------------- */
+.SectionService{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: var(--Gray-50, rgba(243, 243, 243, 1));
+
+}
+.SectionService h1{
+  color: black;
+}
+
+.boxContainer{
+  display: flex;
+}
+.box{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
+  flex-direction: column;
+  height:300px;
+  width: 250px;
+  border-color: black ;
+  margin: 10px;
+  background: var(--White-Color, rgba(255, 255, 255, 1));
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
 }
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
+.box p{
+  text-align: center;
+  color: var(--Par-Color, rgba(124, 124, 124, 1));
 }
-
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
+/* --------------- */
+.SectionAbout{
+  height: 100vh;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  flex-direction: column;
+ background: var(--principal, rgba(17, 17, 17, 1));
+ color: white;
+}
+.containerDescription{
+  height: 300px;
+  width: 500px;
+}
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
-.footer img {
-  flex-shrink: 0;
+.profileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Evita deformaciones */
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
+.profileInfo {
+  text-align: left;
+  color:  var(--Par-Color, rgba(124, 124, 124, 1));
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
+.socialLinks a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--acento, rgba(130, 255, 31, 1));
+  font-weight: bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+/* -------------- */
+.SectionProyects{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--White-Color, rgba(255, 255, 255, 1));
+}
+/* Contenedor de todas las tarjetas */
+.projectsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que en pantallas pequeñas se acomoden en columnas */
+  margin-top: 30px;
+}
+
+/* Estilos de cada tarjeta */
+.projectCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 400px;
+}
+
+/* Efecto hover */
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen dentro de la tarjeta */
+.projectImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Información dentro de la tarjeta */
+.projectInfo {
+  padding: 15px;
+  text-align: start;
+}
+
+.projectInfo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.projectInfo p {
+  font-size: 0.9rem;
+  color: #666;
+}
+.buttonProyects{
+  margin-top: 30px;
+padding: 10px 20px;
+  border: none;
+  background: var(--acento, rgba(130, 255, 31, 1));
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
 }
