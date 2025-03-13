@@ -22,7 +22,7 @@ export default function Home() {
       <div className={styles.imgContainer}>
          <Image
            className="imgHome"
-            src="/imgHome2.jpg"
+            src="/imghome2.jpg"
             alt=""
             layout="responsive"
             width={2040}
