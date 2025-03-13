@@ -48,3 +48,8 @@
 .navLinks li:hover {
   color: #748d75;
 }
+
+.navLink{
+  text-decoration: none;
+  color: rgb(18, 18, 18);
+}

@@ -2,6 +2,8 @@
 
 import styles from '../Styles/Navbar.module.css'
 import { useState, useEffect } from "react";
+import Link from "next/link"
+
 
 export default function Navbar(){
  const [scrolling, setScrolling] = useState(false);
@@ -20,11 +22,11 @@ export default function Navbar(){
         <div className={styles.navContainer}>
             <h1 className={styles.logo}>Pixel&Code</h1>
             <ul className={styles.navLinks}>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#home">Quiénes somos</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#about">Servicios</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <Link className={styles.navLink} href="/">Inicio</Link>
+            <Link className={styles.navLink} href="/about">Quienes somos</Link>
+            <Link className={styles.navLink} href="/proyects">Proyectos</Link>
+            <Link className={styles.navLink} href="/servicios">Servicios</Link>
+            <Link className={styles.navLink} href="/contact">Contacto</Link>
             </ul>
         </div>
     </nav>

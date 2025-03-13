@@ -106,11 +106,12 @@
   justify-content: center;
   flex-direction: column;
  background: var(--principal, rgba(17, 17, 17, 1));
- color: white;
+ color: rgb(255, 255, 255);
 }
 .containerDescription{
   height: 300px;
   width: 500px;
+  color: white;
 }
 .profileContainer {
   display: flex;
