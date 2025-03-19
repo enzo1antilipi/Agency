@@ -1,6 +1,9 @@
+'use client'
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Poppins,Inter } from "next/font/google"
+import { useState } from "react";
 
 
 const poppins = Poppins({
@@ -14,6 +17,11 @@ const inter = Inter({
 });
 export default function Home() {
 
+  const [selected, setSelected ] = useState(null);
+
+  const handleSelect = (index)=>{
+    setSelected(index);
+  }
 
 
   return (
@@ -60,6 +68,47 @@ export default function Home() {
             </div>
           </div>
       </section>
+      {/* seccion de nosotros */}
+      <section className={styles.SectionProyects}>
+          <h3 className={inter.className} style={{color:"rgba(124, 124, 124, 1)" }}>Proyectos</h3>
+          <h1 className={inter.className}>Nuestro trabajo habla por nosotros</h1>  
+
+          <div className={styles.projectsContainer}>
+            {/* Tarjeta 1 */}
+            <div className={styles.projectCard}>
+              <img src="/proyecto1.jpg" alt="Proyecto 1" className={styles.projectImage} />
+              <div className={styles.projectInfo}>
+                <h2 className={inter.className}>Web Bruno Pas</h2>
+                <p className={inter.className}>Diseño web</p>
+                <p className={inter.className} style={{fontSize:"16px"}} > Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
+              </div>
+            </div>
+
+            {/* Tarjeta 2 */}
+            <div className={styles.projectCard}>
+              <img src="/proyecto2.jpg" alt="Proyecto 2" className={styles.projectImage} />
+              <div className={styles.projectInfo}>
+                <h2 className={inter.className}>App Join</h2>
+                <p className={inter.className}>Desarrollo App</p>
+                <p className={inter.className} style={{fontSize:"16px"}} >Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
+              </div>
+            </div>
+
+            {/* Tarjeta 3 */}
+              <div className={styles.projectCard}>
+                <img src="/proyecto3.jpg" alt="Proyecto 3" className={styles.projectImage} />
+                <div className={styles.projectInfo}>
+                  <h2 className={inter.className}>Brickcontrol Software</h2>
+                  <p className={inter.className}>Desarrollo Software</p>
+                  <p className={inter.className} style={{fontSize:"16px"}} >Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
+                </div>
+              </div>
+            </div>
+            <button className={styles.buttonProyects}>Ver mas proyectos</button>
+          </section>
+
+
+      {/*  */}
       <section className={styles.SectionAbout}>
         <h3 className={inter.className} style={{color:"rgba(124, 124, 124, 1)" }}>Quienes somos?</h3>
         <h1 className={inter.className} style={{marginTop:"0px"}}>El equipo detras de las soluciones digitales</h1>
@@ -68,7 +117,7 @@ export default function Home() {
      <div className={styles.profileContainer}>
  
       <div className={styles.imageContainer}>
-        <img src="/imgHome.jpg" alt="Nombre del desarrollador" className={styles.profileImage} />
+        <img src="/foto_enzo.png" alt="Nombre del desarrollador" className={styles.profileImage} />
       </div>
       
       {/* Información del desarrollador */}
@@ -81,9 +130,9 @@ export default function Home() {
         
         {/* Redes sociales */}
         <div className={styles.socialLinks}>
-          <a href="https://github.com" target="_blank">GitHub</a>
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://www.linkedin.com/in/enzo-antilipi-978097218/" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/enzo_antilipi" target="_blank">Instagram</a>
+          <a href="https://github.com/enzo1antilipi" target="_blank">GitHub</a>
         </div>
       </div>
     </div>
@@ -96,60 +145,93 @@ export default function Home() {
         <h2 className={inter.className} style={{color:"white"}}>Romina Yudica</h2>
         <h4 className={inter.className}>Diseñadora Gráfica especializada en Web</h4>
         <p className={inter.className}>
-          Lorem ipsum dolor sit amet. Sed expedita illum non alias ipsam non dolores assumenda non commodi officia ex fuga earum sit nostrum eaque cum unde laboriosam. Cum dolore dolorum eum galisum corporis sit maiores.
+          Apasionada por el diseño digital. Con más de 8 años de experiencia, fusiono estética y funcionalidad para potenciar proyectos. Me especializo en diseño web y UX/UI, creando experiencias visuales únicas que conectan con los usuarios y generan resultados.
         </p>
         
         {/* Redes sociales */}
         <div className={styles.socialLinks}>
-          <a href="https://github.com" target="_blank">GitHub</a>
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://www.linkedin.com/in/romiyudica/" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/rooyudica/" target="_blank">Instagram</a>
+          <a href="https://twitter.com" target="_blank">Behance</a>
         </div>
       </div>
        <div className={styles.imageContainer}>
         <img src="/fotoRomi.jpg" alt="Nombre del desarrollador" className={styles.profileImage} />
       </div>
     </div>
-        
-        
       </section>
-      <section className={styles.SectionProyects}>
-  <h3 className={inter.className} style={{color:"rgba(124, 124, 124, 1)" }}>Proyectos</h3>
-  <h1 className={inter.className}>Nuestro trabajo habla por nosotros</h1>  
-
-  <div className={styles.projectsContainer}>
-    {/* Tarjeta 1 */}
-    <div className={styles.projectCard}>
-      <img src="/proyecto1.jpg" alt="Proyecto 1" className={styles.projectImage} />
-      <div className={styles.projectInfo}>
-        <h2 className={inter.className}>Web Bruno Pas</h2>
-        <p className={inter.className}>Diseño web</p>
-        <p className={inter.className} style={{fontSize:"16px"}} > Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
+      <section className={styles.sectionContact}>
+      <div >
+        <h1 className={inter.className} >¿Listos para crear algo increíble juntos?</h1>
+        <h3 className={inter.className} style={{color:"rgba(124, 124, 124, 1)" }}>Estamos aqui para ayudarte a llevar tu marca al siguiente nivel <br/>Escríbenos y conversamos sobre tu proyecto </h3>
       </div>
-    </div>
-
-    {/* Tarjeta 2 */}
-    <div className={styles.projectCard}>
-      <img src="/proyecto2.jpg" alt="Proyecto 2" className={styles.projectImage} />
-      <div className={styles.projectInfo}>
-        <h2 className={inter.className}>App Join</h2>
-        <p className={inter.className}>Desarrollo App</p>
-        <p className={inter.className} style={{fontSize:"16px"}} >Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
-      </div>
-    </div>
-
-    {/* Tarjeta 3 */}
-      <div className={styles.projectCard}>
-        <img src="/proyecto3.jpg" alt="Proyecto 3" className={styles.projectImage} />
-        <div className={styles.projectInfo}>
-          <h2 className={inter.className}>Brickcontrol Software</h2>
-          <p className={inter.className}>Desarrollo Software</p>
-          <p className={inter.className} style={{fontSize:"16px"}} >Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
+      <div style={{display:"flex",width:"70%",margin:"0px"}}>
+      <div className={styles.containerProfiles}>
+        <div className={styles.profile}>
+          <div className={styles.imageContainer}>
+              <img src="/fotoRomi.jpg" alt="Nombre del desarrollador" className={styles.profileImageContact} />
+            </div>
+          <p className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor"><path d="M22 7.535V17a3 3 0 0 1-2.824 2.995L19 20H5a3 3 0 0 1-2.995-2.824L2 17V7.535l9.445 6.297l.116.066a1 1 0 0 0 .878 0l.116-.066z"/><path d="M19 4c1.08 0 2.027.57 2.555 1.427L12 11.797l-9.555-6.37a3 3 0 0 1 2.354-1.42L5 4z"/></g></svg>hola@romiyudica.com.ar</p>
+          <p className={`${inter.className} ${styles.contacto}`}> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="green" d="M16.8 5.7C14.4 2 9.5.9 5.7 3.2C2 5.5.8 10.5 3.2 14.2l.2.3l-.8 3l3-.8l.3.2c1.3.7 2.7 1.1 4.1 1.1c1.5 0 3-.4 4.3-1.2c3.7-2.4 4.8-7.3 2.5-11.1m-2.1 7.7c-.4.6-.9 1-1.6 1.1c-.4 0-.9.2-2.9-.6c-1.7-.8-3.1-2.1-4.1-3.6c-.6-.7-.9-1.6-1-2.5c0-.8.3-1.5.8-2q.3-.3.6-.3H7c.2 0 .4 0 .5.4c.2.5.7 1.7.7 1.8c.1.1.1.3 0 .4c.1.2 0 .4-.1.5s-.2.3-.3.4c-.2.1-.3.3-.2.5c.4.6.9 1.2 1.4 1.7c.6.5 1.2.9 1.9 1.2c.2.1.4.1.5-.1s.6-.7.8-.9s.3-.2.5-.1l1.6.8c.2.1.4.2.5.3c.1.3.1.7-.1 1"/></svg>2804649512</p>
+        </div>
+        <div className={styles.profile}>
+           <div className={styles.imageContainer}>
+                <img src="/foto_enzo.png" alt="Nombre del desarrollador" className={styles.profileImageContact} />
+              </div>
+          <p className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><g fill="currentColor"><path d="M22 7.535V17a3 3 0 0 1-2.824 2.995L19 20H5a3 3 0 0 1-2.995-2.824L2 17V7.535l9.445 6.297l.116.066a1 1 0 0 0 .878 0l.116-.066z"/><path d="M19 4c1.08 0 2.027.57 2.555 1.427L12 11.797l-9.555-6.37a3 3 0 0 1 2.354-1.42L5 4z"/></g></svg>enzoantilipi1@gmail.com</p>
+          <p className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20"><path fill="green" d="M16.8 5.7C14.4 2 9.5.9 5.7 3.2C2 5.5.8 10.5 3.2 14.2l.2.3l-.8 3l3-.8l.3.2c1.3.7 2.7 1.1 4.1 1.1c1.5 0 3-.4 4.3-1.2c3.7-2.4 4.8-7.3 2.5-11.1m-2.1 7.7c-.4.6-.9 1-1.6 1.1c-.4 0-.9.2-2.9-.6c-1.7-.8-3.1-2.1-4.1-3.6c-.6-.7-.9-1.6-1-2.5c0-.8.3-1.5.8-2q.3-.3.6-.3H7c.2 0 .4 0 .5.4c.2.5.7 1.7.7 1.8c.1.1.1.3 0 .4c.1.2 0 .4-.1.5s-.2.3-.3.4c-.2.1-.3.3-.2.5c.4.6.9 1.2 1.4 1.7c.6.5 1.2.9 1.9 1.2c.2.1.4.1.5-.1s.6-.7.8-.9s.3-.2.5-.1l1.6.8c.2.1.4.2.5.3c.1.3.1.7-.1 1"/></svg>2945638804</p>
         </div>
       </div>
-    </div>
-    <button className={styles.buttonProyects}>Ver mas proyectos</button>
-  </section>
+
+      <div style={{width:"100%"}}> 
+        <div className={styles.form}> 
+              {/* Encabezado con botones */}
+              <div className={styles.header}>
+                <div className={styles.buttonContainerInput}>
+                <button className={`${inter.className} ${styles.buttonInput} ${selected === 0 ? styles.selected : ""}`}
+                  onClick={() => handleSelect(0)}>Desarrollo web</button>
+                <button className={`${inter.className} ${styles.buttonInput} ${selected === 1 ? styles.selected : ""}`}
+                  onClick={() => handleSelect(1)}>Desarrollo de Software </button>
+                </div>
+                <div className={styles.buttonContainerInput}>
+                <button className={`${inter.className} ${styles.buttonInput} ${selected === 2 ? styles.selected : ""}`}
+                  onClick={() => handleSelect(2)}>Desarrollado de Apps</button>
+                <button className={`${inter.className} ${styles.buttonInput} ${selected === 3 ? styles.selected : ""}`}
+                  onClick={() => handleSelect(3)}>Otros</button>
+                </div>
+                {/* {["Desarrollo Web", "Desarrollo de Software", "Desarrollo de Apps", "Otros"].map((item) => (
+                  <button key={item} className={styles.button}>
+                    {item}
+                  </button>
+                ))} */}
+              </div>
+
+              {/* Formulario */}
+              <form className={styles.form}>
+                <div className={styles.inputGroup}>
+                  <input type="text" className={styles.input}  placeholder="Nombre"/>
+                  <label className={styles.label} >Nombre</label>
+                </div>
+
+                <div className={styles.inputGroup}>
+                  <input type="email" className={styles.input}  placeholder="Email"/>
+                   <label className={styles.label}  >Email</label>
+                </div>
+
+                <div className={styles.inputGroup}>
+                  <label className={styles.label}>Mensaje</label>
+                  <textarea className={styles.textarea} ></textarea>
+                </div>
+
+                <button type="submit" className={styles.submitButton}>
+                  Enviar
+                </button>
+              </form>
+            
+        </div>
+      </div>
+      </div>
+      </section>
 
             
       </main>

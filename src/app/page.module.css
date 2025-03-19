@@ -72,7 +72,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: var(--Gray-50, rgba(243, 243, 243, 1));
+  background: rgba(248, 248, 248, 1);
 
 }
 .SectionService h1{
@@ -150,7 +150,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--White-Color, rgba(255, 255, 255, 1));
+  background: rgba(248, 248, 248, 1);
+
 }
 /* Contenedor de todas las tarjetas */
 .projectsContainer {
@@ -210,4 +211,175 @@ padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
+}
+/* ---------------------Seccion de contacto ------------------------*/
+.sectionContact{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+.containerProfiles{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  
+}
+.profile{
+  flex-direction: column;
+}
+.profileImageContact{
+  width: 130px;
+  height: 130px;
+}
+.form{
+  background: rgba(238, 238, 238, 1);
+  height: 75vh;
+  width: 90%;
+  margin-left: 5%;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del encabezado con los botones */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-direction: column;
+  width: 80%;
+}
+.buttonContainerInput{
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  margin: 10px;
+}
+
+.buttonInput {
+  background: rgb(211, 211, 211);
+  color: black;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  font-size: 14px;
+  text-align: center;
+}
+
+.buttonInput:hover {
+  background: #a0a0a0; /* Un tono más claro de gris al pasar el mouse */
+  transform: scale(1.05);
+}
+
+.selected {
+  background: var(--acento, rgba(130, 255, 31, 1)) !important;
+  color: black;
+}
+
+/* Estilos del formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .inputGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+} */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.input {
+  width: 100%;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input:focus {
+  border-bottom: 2px solid #007bff;
+}
+
+.input::placeholder {
+  color: transparent;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  color: #007bff;
+  font-size: 12px;
+  top: -20px;
+}
+
+.textarea {
+  resize: none;
+}
+
+.submitButton {
+  background: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: bold;
+  width: 20%;
+}
+
+.submitButton:hover {
+  background: #218838;
+}
+.contacto {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaciado entre el ícono y el texto */
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: gray;
+  padding: 5px;
 }
