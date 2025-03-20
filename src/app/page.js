@@ -219,8 +219,9 @@ export default function Home() {
                 </div>
 
                 <div className={styles.inputGroup}>
-                  <label className={styles.label}>Mensaje</label>
                   <textarea className={styles.textarea} ></textarea>
+                  <label className={styles.label}>Mensaje</label>
+                
                 </div>
 
                 <button type="submit" className={styles.submitButton}>
