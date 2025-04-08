@@ -8,10 +8,8 @@
  .imgHome { 
   object-fit: cover; 
   object-position: top; 
-
 } 
 .overlay {
-
   position: absolute;
   top: 0;
   left: 0;
@@ -19,7 +17,6 @@
   height: 90vh;
   background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad según necesites */
   margin: 0px;
-  
 }
 
 /* Contenedor del texto y los botones */
@@ -144,70 +141,6 @@
 }
 
 /* -------------- */
-/* .SectionProyects{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: rgba(248, 248, 248, 1);
-
-}
-.projectsContainer {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; 
-  margin-top: 30px;
-}
-
-.projectCard {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  height: 400px;
-}
-
-
-.projectCard:hover {
-  transform: translateY(-5px);
-}
-
-.projectImage {
-  width: 100%;
-  height: 180px;
-  object-fit: cover; 
-}
-
-.projectInfo {
-  padding: 15px;
-  text-align: start;
-}
-
-.projectInfo h2 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.projectInfo p {
-  font-size: 0.9rem;
-  color: #666;
-}
-.buttonProyects{
-  margin-top: 30px;
-padding: 10px 20px;
-  border: none;
-  background: var(--acento, rgba(130, 255, 31, 1));
-  color: #333;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
-} */
  .SectionProyects {
   width: 100%;
   min-height: 100vh;
@@ -282,6 +215,11 @@ padding: 10px 20px;
 }
 
 /* ---------------------Seccion de contacto ------------------------*/
+.containerContact{
+  display: flex;
+  width: 70%;
+  margin: 0px;
+}
 .sectionContact{
   height: 100vh;
   width: 100%;
@@ -295,14 +233,19 @@ padding: 10px 20px;
   display: flex;
   flex-direction: column;
   width: 35%;
-  
+}
+.containerProfilesMobile{
+  display: none;
+}
+.containerProfiles{
+  display: block;
 }
 .profile{
   flex-direction: column;
 }
 .profileImageContact{
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
 }
 .form{
   background: rgba(238, 238, 238, 1);
@@ -361,26 +304,6 @@ padding: 10px 20px;
   display: flex;
   flex-direction: column;
 }
-
-/* .inputGroup {
-  margin-bottom: 15px;
-}
-
-.label {
-  font-weight: 500;
-  margin-bottom: 5px;
-  display: block;
-  color: #333;
-}
-
-.input,
-.textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-} */
 .inputGroup {
   display: flex;
   flex-direction: column;
@@ -454,9 +377,104 @@ padding: 10px 20px;
 .contacto {
   display: flex;
   align-items: center;
-  gap: 8px; /* Espaciado entre el ícono y el texto */
-  border: 1px solid;
-  border-radius: 10px;
-  border-color: gray;
+  gap: 8px; 
   padding: 5px;
+}
+
+/* Responsive para mobile */
+@media (max-width: 768px) {
+  .imgHome{
+    height: 100% !important;
+    width: auto;
+  }
+  .content h1 {
+    font-size: 28px !important;
+  }
+
+  .content h3 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button, .buttonContact {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .imgContainer {
+    height: 90vh; /* un poco menos en mobile */
+  }
+}
+
+/* Seccion servicios en mobile */
+@media (max-width: 768px) {
+  /* Servicios */
+  .boxContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    padding: 20px;
+  }
+
+  /* Sobre Nosotros */
+  .SectionAbout {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .profileContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profileImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profileInfo {
+    text-align: center;
+  }
+
+  .containerDescription {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* seccion contacto mobile */
+@media screen and (max-width: 768px) {
+  .sectionContact{
+    height: auto;
+  }
+  .containerContact{
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+  .form{
+    width: 90%;
+    height: 100%;
+  }
+ .containerProfilesMobile{
+  display: block;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+ }
+ .containerProfiles{
+  display: none;
+ }
 }
