@@ -478,3 +478,15 @@
   display: none;
  }
 }
+
+@media screen and (max-width: 768px) {
+.SectionService{
+  height: auto;
+}
+.SectionProyects{
+  height: auto;
+}
+.SectionAbout{
+  height: auto;
+}
+}
