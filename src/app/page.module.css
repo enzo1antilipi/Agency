@@ -469,14 +469,16 @@
   }
  .containerProfilesMobile{
   display: block;
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;
-  margin:auto;
+  margin-top: 90px;
+  margin-left: 10%;
  }
  .containerProfiles{
   display: none;
  }
+ .sectionContactTitle{
+  margin: 10px;
+ }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -488,5 +490,12 @@
 }
 .SectionAbout{
   height: auto;
+}
+.profileMobile{
+  display: flex;
+}
+.profileImageContact{
+   width: 90px;
+  height: 90px;
 }
 }
