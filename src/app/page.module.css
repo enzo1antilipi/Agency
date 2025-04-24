@@ -97,7 +97,8 @@
 }
 /* --------------- */
 .SectionAbout{
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,14 +123,20 @@
 .profileImage {
   width: 200px;
   height: 200px;
-  border-radius: 50%; /* Hace la imagen redonda */
-  object-fit: cover; /* Evita deformaciones */
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.06); /* Levemente más grande */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 .profileInfo {
   text-align: left;
   color:  var(--Par-Color, rgba(124, 124, 124, 1));
-
+ 
 }
 
 .socialLinks a {
@@ -228,6 +235,10 @@
   align-items: center;
   flex-direction: column;
   margin: auto;
+}
+.containerForm{
+ width: 100%; 
+ height: 50vh;
 }
 .containerProfiles{
   display: flex;
@@ -430,6 +441,8 @@
   .SectionAbout {
     padding: 40px 20px;
     text-align: center;
+    height: auto ;
+    
   }
 
   .profileContainer {
@@ -478,7 +491,9 @@
  .sectionContactTitle{
   margin: 10px;
  }
-
+.contacto{
+  margin: 6px;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -495,7 +510,58 @@
   display: flex;
 }
 .profileImageContact{
-   width: 90px;
-  height: 90px;
+   width: 100px;
+  height: 100px;
 }
+ .containerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: auto;
+  }
+
+  .form {
+    width:95%;
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttonContainerInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .buttonInput {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .inputGroup {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .input,
+  .textarea {
+    width: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .submitButton {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
 }
