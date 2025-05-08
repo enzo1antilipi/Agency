@@ -52,6 +52,7 @@
   display: flex;
   gap: 20px;
   color: black;
+  
 }
 
 .navLinks li a{
@@ -60,6 +61,7 @@
   transition: color 0.3s;
   color: rgb(29, 29, 29);
   text-decoration: none;
+
 }
 
 .navLinks li:hover {
@@ -68,7 +70,8 @@
 
 .navLink{
   text-decoration: none;
-  color: rgb(18, 18, 18);
+  color: rgb(33, 33, 33);
+    font-weight: 600;
 }
 
 .menuToggle {

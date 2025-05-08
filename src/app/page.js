@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { Poppins,Inter } from "next/font/google"
 import { useState } from "react";
+import Link from "next/link";
 
 
 const poppins = Poppins({
@@ -16,6 +17,8 @@ const inter = Inter({
   weight: "500", // Peso disponible para Italianno
 });
 export default function Home() {
+
+ const [isOpen, setIsOpen] = useState(false);
 
   const [selected, setSelected ] = useState(null);
 
@@ -42,12 +45,16 @@ export default function Home() {
           <h1 className={poppins.className} style={{fontSize:"50px"}}>Transformamos ideas en experiencias digitales únicas</h1>
           <h3 className={inter.className}>Diseño web creativo y desarrollo de software a medida para impulsar tu negocio.</h3>
           <div className={styles.buttonContainer}>
+            <Link href="/proyectswebs">
             <button className={`${styles.button} ${inter.className}`} >Ver proyectos</button>
+            </Link>
+            <Link href="#contacto">
             <button className={`${styles.buttonContact} ${inter.className}`}>Contactar</button>
+            </Link>
         </div>
        </div>
       </div>
-      <section className={styles.SectionService}>
+      <section className={styles.SectionService} id="servicios">
           <h3 className={inter.className} style={{color:"rgba(124, 124, 124, 1)" }}>Servicios</h3>
           <h1 className={inter.className} style={{marginTop:"0px"}}> Esto es lo que hacemos mejor</h1>
           <div className={styles.boxContainer}>
@@ -69,7 +76,7 @@ export default function Home() {
           </div>
       </section>
       {/* seccion de nosotros */}
-      <section className={styles.SectionProyects}>
+      <section className={styles.SectionProyects}  id="proyectos">
           <h3 className={inter.className} style={{color:"rgba(124, 124, 124, 1)" }}>Proyectos</h3>
           <h1 className={inter.className}>Nuestro trabajo habla por nosotros</h1>  
 
@@ -78,9 +85,10 @@ export default function Home() {
             <div className={styles.projectCard}>
               <img src="/proyecto1.jpg" alt="Proyecto 1" className={styles.projectImage} />
               <div className={styles.projectInfo}>
-                <h2 className={inter.className}>Web Bruno Pas</h2>
+                <h2 className={inter.className}>Webs</h2>
                 <p className={inter.className}>Diseño web</p>
-                <p className={inter.className} style={{fontSize:"16px"}} > Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
+                <p className={inter.className} style={{fontSize:"16px"}} > Creamos sitios web a medida para potenciar tu negocio o perfil profesional, adaptados a tus objetivos y con tecnología moderna.</p>
+                 
               </div>
             </div>
 
@@ -88,9 +96,9 @@ export default function Home() {
             <div className={styles.projectCard}>
               <img src="/proyecto2.jpg" alt="Proyecto 2" className={styles.projectImage} />
               <div className={styles.projectInfo}>
-                <h2 className={inter.className}>App Join</h2>
+                <h2 className={inter.className}>Apps</h2>
                 <p className={inter.className}>Desarrollo App</p>
-                <p className={inter.className} style={{fontSize:"16px"}} >Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
+                <p className={inter.className} style={{fontSize:"16px"}} >Desarrollamos aplicaciones intuitivas y funcionales, pensadas para optimizar procesos o mejorar la experiencia de tus usuarios.</p>
               </div>
             </div>
 
@@ -98,18 +106,26 @@ export default function Home() {
               <div className={styles.projectCard}>
                 <img src="/proyecto3.jpg" alt="Proyecto 3" className={styles.projectImage} />
                 <div className={styles.projectInfo}>
-                  <h2 className={inter.className}>Brickcontrol Software</h2>
+                  <h2 className={inter.className}>Software</h2>
                   <p className={inter.className}>Desarrollo Software</p>
-                  <p className={inter.className} style={{fontSize:"16px"}} >Descripción breve del proyecto. Explica su propósito y tecnología usada.</p>
+                  <p className={inter.className} style={{fontSize:"16px"}} >Construimos software personalizado que se integra a tu flujo de trabajo, resolviendo necesidades específicas con soluciones escalables.</p>
+               
                 </div>
+              
+           
+
               </div>
+             
+
             </div>
-            <button className={styles.buttonProyects}>Ver mas proyectos</button>
+            <Link href="/proyectswebs">
+            <button className={styles.buttonProyects}>Ver proyectos</button>
+            </Link>
           </section>
 
 
       {/*  */}
-      <section className={styles.SectionAbout}>
+      <section className={styles.SectionAbout}  id="nosotros">
         <h3 className={inter.className} style={{color:"rgba(124, 124, 124, 1)" }}>Quienes somos?</h3>
         <h1 className={inter.className} style={{marginTop:"0px"}}>El equipo detras de las soluciones digitales</h1>
          {/* Imagen del desarrollador */}
@@ -133,7 +149,7 @@ Trabajo con equipos y clientes alineando objetivos técnicos y comerciales para 
         {/* Redes sociales */}
         <div className={styles.socialLinks}>
           <a href="https://www.linkedin.com/in/enzo-antilipi-978097218/" target="_blank">LinkedIn</a>
-          <a href="https://www.instagram.com/enzo_antilipi" target="_blank">Instagram</a>
+          <a href="https://portfolio-seven-teal-27.vercel.app/" target="_blank">Portafolio</a>
           <a href="https://github.com/enzo1antilipi" target="_blank">GitHub</a>
         </div>
       </div>
@@ -162,7 +178,9 @@ Trabajo con equipos y clientes alineando objetivos técnicos y comerciales para 
       </div>
     </div>
       </section>
-      <section className={styles.sectionContact}>
+
+      
+      <section className={styles.sectionContact} id="contacto">
       <div className={styles.sectionContactTitle}>
         <h1 className={inter.className} >¿Listos para crear algo increíble juntos?</h1>
         <h3 className={inter.className} style={{color:"rgba(124, 124, 124, 1)" }}>Estamos aqui para ayudarte a llevar tu marca al siguiente nivel <br/>Escríbenos y conversamos sobre tu proyecto </h3>

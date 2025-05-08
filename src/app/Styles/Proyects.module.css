@@ -1,6 +1,116 @@
 .containerSection{
-    height: 90vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.containerTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.containerTitle h3{
+    margin-top: 0px;
+}
+.containerArticle{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    justify-content: space-between;
+}
+.containerImage {
+    width: 52%;
+  width: 520px; /* o lo que desees */
+  height: 300px; /* o ajustalo según necesidad */
+  overflow: auto;
+  border: 1px solid #ccc; /* opcional, solo para visualizar el borde */
+}
+.containerImageDesk {
+    width: 52%;
+  width: 520px; /* o lo que desees */
+  height: 300px; /* o ajustalo según necesidad */
+  overflow: auto;
+  border: 1px solid #ccc; /* opcional, solo para visualizar el borde */
+}
+.containerText {
+    width: 45%;
+ text-align: start;
+ margin-left: 30px;
+ justify-content: start;
+}
+.projectImage {
+  width: 500px; /* simula que es más grande que el contenedor */
+  height: auto;
+}
+.containerCheck{
+    flex-direction: column;
+}
+.icon{
+    color: green;
+}
+.containerCheck {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacio entre el icono y el texto */
+  margin-top: 0px;
+}
+
+.checkItem svg {
+  fill: currentColor; /* Usa el color del texto */
+  color: #4EB900; 
+}
+.containerImagemobile{
+  display: none;
+}
+@media (max-width: 768px) {
+  .containerArticle {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 30px;
+  }
+.containerImageDesk {
+    display: none;
+  }
+  .containerImage {
+    width: 95%;
+    height: 300px; /* tamaño fijo */
+    overflow-y: auto; /* scroll vertical si se necesita */
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: start; /* importante: evita centrado vertical absoluto */
+  }
+ .containerImagemobile {
+    width: 95%;
+    height: 300px; /* tamaño fijo */
+    overflow-y: auto; /* scroll vertical si se necesita */
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: start; /* importante: evita centrado vertical absoluto */
+  }
+  .projectImage {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .containerText {
+    width: 90%;
+    margin-left: 0;
+    text-align: start;
+  }
 }
