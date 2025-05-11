@@ -15,4 +15,50 @@
  justify-content: center;
   align-items: center;
   margin-top: 30px;
+flex-direction: column;
+}
+.footer {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.provincias {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.bottom {
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  width: 100%;
 }
