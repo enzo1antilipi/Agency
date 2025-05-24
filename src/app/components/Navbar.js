@@ -28,7 +28,7 @@ export default function Navbar(){
       <nav  className={`${styles.navbar} ${scrolling ? styles.scrolled : ""}`}>
         <div className={styles.navContainer}>
           <Link href="/" >
-              <img src="/Logo3.png" alt="Proyecto 1" className={styles.projectImage} />
+              <img src="/Logonavbar.png" alt="Proyecto 1" className={styles.projectImage} />
                </Link>
                <button className={styles.menuToggle} onClick={toggleMenu}>
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -38,7 +38,7 @@ export default function Navbar(){
             <Link className={styles.navLink} href="#servicios">Servicios</Link>
             <Link className={styles.navLink} href="#proyectos">Proyectos</Link>
             <Link className={styles.navLink} href="#nosotros">Quienes somos</Link>
-            <Link className={styles.navLink} style={{marginRight:"30px"}} href="#contacto">Contacto</Link>
+            <Link className={styles.navLink} style={{marginRight:"70px"}} href="#contacto">Contacto</Link>
             </ul>
         </div>
     </nav>

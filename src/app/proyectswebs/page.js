@@ -7,14 +7,15 @@ export default function proyects (){
     return (
         <section className={style.containerSection}>
             <div className={style.containerTitle}> 
-                <h1>
-                    Webs Proyects
+            <img src="/pincel.png" alt="Decoración" className={style.brushImage} />
+                <h1 className={style.titleText}>
+                    Proyectos webs
                 </h1>
-                <h3>Conoce alguno de nuestros proyectos</h3>
+                {/* <h3>Conoce alguno de nuestros proyectos</h3> */}
             </div>
-            <article className={style.containerArticle}>
+            <article className={style.containerArticle} style={{marginTop: '-50px'}}>
                 <div className={style.containerImage}>
-                    <img src="/inmobiliaria2.jpg" alt="Proyecto 1" className={style.projectImage} />    
+                    <img src="/inmobiliaria3.jpg" alt="Proyecto 1" className={style.projectImage} />    
                 </div>
                 <div className={style.containerText}>
                     <h1>Inmobiliaria </h1>
@@ -32,7 +33,7 @@ export default function proyects (){
             {/*  */}
             <article className={style.containerArticle}>
                  <div className={style.containerImagemobile}>
-                    <img src="/inmobiliaria2.jpg" alt="Proyecto 1" className={style.projectImage} />    
+                    <img src="/edificios.jpg" alt="Proyecto 1" className={style.projectImage} />    
                 </div>
                 <div className={style.containerText}>
                     <h1>Constructora </h1>

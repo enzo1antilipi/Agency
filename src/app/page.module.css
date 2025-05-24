@@ -1,40 +1,41 @@
 
 .imgContainer {
-  height:  90vh; /* Ajusta la altura máxima según necesites */
+  height:  95vh; /* Ajusta la altura máxima según necesites */
   overflow: hidden;
-  margin-left: 0%;
-  margin-right: 0%;
+  /* margin-left: 0%; */
+  /* margin-right: 0%; */
 }
  .imgHome { 
-  object-fit: cover; 
-  object-position: top; 
+  margin-top: -90px;
+  width: 100%;
+  object-position:  center 9% !important;
 } 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90vh;
-  background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad según necesites */
+  height: 95vh;
+  background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
   margin: 0px;
 }
 
 /* Contenedor del texto y los botones */
 .content {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 32%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: start;
   color: white;
-  width: 80%;
+  width: 55%;
 }
 
 
 .buttonContainer {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: start;
   margin-top: 15px;
 }
 
@@ -468,6 +469,8 @@
   align-items: center;
   gap: 8px; 
   padding: 5px;
+  color: #333;
+  text-decoration: none;
 }
 
 /* Responsive para mobile */
@@ -486,8 +489,12 @@
   }
 
   .buttonContainer {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+    width: 100%;
+    margin: 0px;
   }
 
   .button, .buttonContact {
@@ -497,6 +504,33 @@
 
   .imgContainer {
     height: 90vh; /* un poco menos en mobile */
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89vh;
+    background: rgba(0, 0, 0, 0.4); /* Ajusta la opacidad según necesites */
+    margin: 0px;
+  }
+  .content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+  }
+  .imgContainer{
+    height: 100vh;
+  }
+  .imgHome {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -643,3 +677,47 @@
     padding: 12px;
   }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+.cursor {
+  position: relative;
+  width: auto;
+  margin: 0px ;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  text-align: start;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  font-family: 'Anonymous Pro', monospace;
+  color: white;
+  max-width: 69ch; /* ajustá al largo de tu texto real */
+  animation: 
+    typewriter 4s steps(44) 1s 1 normal both,
+    blinkingCursor 500ms steps(1) infinite normal;
+}
+
+.typewriterAnimation {
+  animation: 
+    typewriter 5s steps(50) 1s 1 normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkingCursor {
+  from { border-right-color: rgba(255, 255, 255, 0.75); }
+  to { border-right-color: transparent; }
+}
+@media screen and (max-width: 768px) {
+
+  .cursor{
+  max-width: 16ch; /* ajustá al largo de tu texto real */
+
+  }
+}
+

@@ -11,9 +11,9 @@
   align-items: center;
   z-index: 1000;
   transition: background 0.3s ease, opacity 0.3s ease;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.5); /* Opacidad baja al inicio */
-  backdrop-filter: blur(10px);
+  height: 30px;
+  background: rgb(255, 255, 255); /* Opacidad baja al inicio */
+  /* backdrop-filter: blur(10px); */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 .imglogo {
@@ -32,10 +32,11 @@
 }
 
 .projectImage{
-  max-height: 40px;
+  max-height: 35px;
+  margin-left: 16%;
 }
 .scrolled {
-  background: rgba(255, 255, 255, 0.85); /* Aumenta la opacidad al hacer scroll */
+  background: rgba(255, 255, 255, ); /* Aumenta la opacidad al hacer scroll */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -44,7 +45,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
 }
 
 .navLinks {
@@ -70,8 +71,8 @@
 
 .navLink{
   text-decoration: none;
-  color: rgb(33, 33, 33);
-    font-weight: 600;
+  color: rgb(44, 44, 44);
+  font-weight: 600;
     
 }
 
@@ -94,6 +95,8 @@
 .navbar{
    width: 92%;
   backdrop-filter: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  
 
   }
   .navLinks {
@@ -111,4 +114,9 @@
   .navLinks.open {
     display: flex;
   }
+.projectImage{
+  max-height: 35px;
+  margin-left: -5%;
+}
+  
 }

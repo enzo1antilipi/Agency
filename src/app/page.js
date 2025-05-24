@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import { Poppins,Inter } from "next/font/google"
 import { useState } from "react";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 
 const poppins = Poppins({
   subsets: ["latin"], // Idiomas compatibles
@@ -31,7 +31,7 @@ export default function Home() {
     <div >
       <main >
       <div className={styles.imgContainer}>
-         <Image
+         {/* <Image
            className={styles.imgHome}
             src="/imghome2.jpg"
             alt=""
@@ -39,18 +39,42 @@ export default function Home() {
             width={2040}
             height={1550}
             priority
-          />
+          /> */}
+          <video className={styles.imgHome}
+              src="/videcode.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline></video>
             <div className={styles.overlay}></div>
         <div className={styles.content}>
-          <h1 className={poppins.className} style={{fontSize:"50px"}}>Transformamos ideas en experiencias digitales únicas</h1>
-          <h3 className={inter.className}>Diseño web creativo y desarrollo de software a medida para impulsar tu negocio.</h3>
+          <h1 className={poppins.className} style={{fontSize:"40px"}}>Transformamos ideas en experiencias digitales únicas</h1>
+          {/* <h3 className={inter.className}>Diseño web creativo y desarrollo de software a medida para impulsar tu negocio.</h3> */}
+          <p className={`${styles.cursor} ${styles.typewriterAnimation}`}>Agencia digital especializada en diseño web y desarrollo de software. </p>
           <div className={styles.buttonContainer}>
             <Link href="/proyectswebs">
-            <button className={`${styles.button} ${inter.className}`} >Ver proyectos</button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              className={`${styles.button} ${inter.className}`}
+            >
+              Ver proyectos
+            </motion.button>
+            {/* <button className={`${styles.button} ${inter.className}`} >Ver proyectos</button> */}
             </Link>
             <Link href="#contacto">
-            <button className={`${styles.buttonContact} ${inter.className}`}>Contactar</button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              className={`${styles.buttonContact} ${inter.className}`}
+            >
+              Contactar
+            </motion.button>
+            {/* <button className={`${styles.buttonContact} ${inter.className}`}>Contactar</button> */}
             </Link>
+            
         </div>
        </div>
       </div>
@@ -82,7 +106,12 @@ export default function Home() {
 
           <div className={styles.projectsContainer}>
             {/* Tarjeta 1 */}
-            <div className={styles.projectCard}>
+            <motion.div className={`${styles.projectCard} ${inter.className}`}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(0,255,255,0.3)' }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      viewport={{ once: true }}>
               <img src="/proyecto1.jpg" alt="Proyecto 1" className={styles.projectImage} />
               <div className={styles.projectInfo}>
                 <h2 className={inter.className}>Webs</h2>
@@ -90,7 +119,7 @@ export default function Home() {
                 <p className={inter.className} style={{fontSize:"16px"}} > Creamos sitios web a medida para potenciar tu negocio o perfil profesional, adaptados a tus objetivos y con tecnología moderna.</p>
                  
               </div>
-            </div>
+            </motion.div>
 
             {/* Tarjeta 2 */}
             <div className={styles.projectCard}>
@@ -199,7 +228,7 @@ Trabajo con equipos y clientes alineando objetivos técnicos y comerciales para 
                 <img src="/foto_enzo.png" alt="Nombre del desarrollador" className={styles.profileImageContact} />
               </div>
           <p className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><g fill="currentColor"><path d="M22 7.535V17a3 3 0 0 1-2.824 2.995L19 20H5a3 3 0 0 1-2.995-2.824L2 17V7.535l9.445 6.297l.116.066a1 1 0 0 0 .878 0l.116-.066z"/><path d="M19 4c1.08 0 2.027.57 2.555 1.427L12 11.797l-9.555-6.37a3 3 0 0 1 2.354-1.42L5 4z"/></g></svg>enzoantilipi1@gmail.com</p>
-          <p className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20"><path fill="green" d="M16.8 5.7C14.4 2 9.5.9 5.7 3.2C2 5.5.8 10.5 3.2 14.2l.2.3l-.8 3l3-.8l.3.2c1.3.7 2.7 1.1 4.1 1.1c1.5 0 3-.4 4.3-1.2c3.7-2.4 4.8-7.3 2.5-11.1m-2.1 7.7c-.4.6-.9 1-1.6 1.1c-.4 0-.9.2-2.9-.6c-1.7-.8-3.1-2.1-4.1-3.6c-.6-.7-.9-1.6-1-2.5c0-.8.3-1.5.8-2q.3-.3.6-.3H7c.2 0 .4 0 .5.4c.2.5.7 1.7.7 1.8c.1.1.1.3 0 .4c.1.2 0 .4-.1.5s-.2.3-.3.4c-.2.1-.3.3-.2.5c.4.6.9 1.2 1.4 1.7c.6.5 1.2.9 1.9 1.2c.2.1.4.1.5-.1s.6-.7.8-.9s.3-.2.5-.1l1.6.8c.2.1.4.2.5.3c.1.3.1.7-.1 1"/></svg>2945638804</p>
+          <a  href="https://wa.me/5492945638804" target="_blank" rel="noopener noreferrer" className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20"><path fill="green" d="M16.8 5.7C14.4 2 9.5.9 5.7 3.2C2 5.5.8 10.5 3.2 14.2l.2.3l-.8 3l3-.8l.3.2c1.3.7 2.7 1.1 4.1 1.1c1.5 0 3-.4 4.3-1.2c3.7-2.4 4.8-7.3 2.5-11.1m-2.1 7.7c-.4.6-.9 1-1.6 1.1c-.4 0-.9.2-2.9-.6c-1.7-.8-3.1-2.1-4.1-3.6c-.6-.7-.9-1.6-1-2.5c0-.8.3-1.5.8-2q.3-.3.6-.3H7c.2 0 .4 0 .5.4c.2.5.7 1.7.7 1.8c.1.1.1.3 0 .4c.1.2 0 .4-.1.5s-.2.3-.3.4c-.2.1-.3.3-.2.5c.4.6.9 1.2 1.4 1.7c.6.5 1.2.9 1.9 1.2c.2.1.4.1.5-.1s.6-.7.8-.9s.3-.2.5-.1l1.6.8c.2.1.4.2.5.3c.1.3.1.7-.1 1"/></svg>2945638804</a>
         </div>
       </div>
 
@@ -267,7 +296,7 @@ Trabajo con equipos y clientes alineando objetivos técnicos y comerciales para 
               </div>
             <div style={{display:"flex", flexDirection:"column"}}>
           <p className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><g fill="currentColor"><path d="M22 7.535V17a3 3 0 0 1-2.824 2.995L19 20H5a3 3 0 0 1-2.995-2.824L2 17V7.535l9.445 6.297l.116.066a1 1 0 0 0 .878 0l.116-.066z"/><path d="M19 4c1.08 0 2.027.57 2.555 1.427L12 11.797l-9.555-6.37a3 3 0 0 1 2.354-1.42L5 4z"/></g></svg>:enzoantilipi1@gmail.com</p>
-          <p className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 20 20"><path fill="black" d="M16.8 5.7C14.4 2 9.5.9 5.7 3.2C2 5.5.8 10.5 3.2 14.2l.2.3l-.8 3l3-.8l.3.2c1.3.7 2.7 1.1 4.1 1.1c1.5 0 3-.4 4.3-1.2c3.7-2.4 4.8-7.3 2.5-11.1m-2.1 7.7c-.4.6-.9 1-1.6 1.1c-.4 0-.9.2-2.9-.6c-1.7-.8-3.1-2.1-4.1-3.6c-.6-.7-.9-1.6-1-2.5c0-.8.3-1.5.8-2q.3-.3.6-.3H7c.2 0 .4 0 .5.4c.2.5.7 1.7.7 1.8c.1.1.1.3 0 .4c.1.2 0 .4-.1.5s-.2.3-.3.4c-.2.1-.3.3-.2.5c.4.6.9 1.2 1.4 1.7c.6.5 1.2.9 1.9 1.2c.2.1.4.1.5-.1s.6-.7.8-.9s.3-.2.5-.1l1.6.8c.2.1.4.2.5.3c.1.3.1.7-.1 1"/></svg>:2945638804</p>
+          <a  href="https://wa.me/5492945638804" target="_blank" rel="noopener noreferrer" className={`${inter.className} ${styles.contacto}`}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 20 20"><path fill="black" d="M16.8 5.7C14.4 2 9.5.9 5.7 3.2C2 5.5.8 10.5 3.2 14.2l.2.3l-.8 3l3-.8l.3.2c1.3.7 2.7 1.1 4.1 1.1c1.5 0 3-.4 4.3-1.2c3.7-2.4 4.8-7.3 2.5-11.1m-2.1 7.7c-.4.6-.9 1-1.6 1.1c-.4 0-.9.2-2.9-.6c-1.7-.8-3.1-2.1-4.1-3.6c-.6-.7-.9-1.6-1-2.5c0-.8.3-1.5.8-2q.3-.3.6-.3H7c.2 0 .4 0 .5.4c.2.5.7 1.7.7 1.8c.1.1.1.3 0 .4c.1.2 0 .4-.1.5s-.2.3-.3.4c-.2.1-.3.3-.2.5c.4.6.9 1.2 1.4 1.7c.6.5 1.2.9 1.9 1.2c.2.1.4.1.5-.1s.6-.7.8-.9s.3-.2.5-.1l1.6.8c.2.1.4.2.5.3c.1.3.1.7-.1 1"/></svg>:2945638804</a>
         </div>
         </div>
       </div>

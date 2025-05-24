@@ -21,8 +21,8 @@ export default function Footer(){
           </div>
           <div className={styles.column}>
             <h4>Contacto</h4>
-            <p>Correo: contacto@pixelycode.com</p>
-            <p>Instagram: @pixelycode</p>
+            <p>Correo: enzoantilipi1@gmail.com</p>
+            {/* <p>Instagram: @pixelycode</p> */}
             <p>Teléfono: +54 9 2945 638804</p>
           </div>
         </div>
