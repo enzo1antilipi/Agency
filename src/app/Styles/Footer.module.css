@@ -62,3 +62,18 @@ flex-direction: column;
   color: #999;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .footer {
+    padding: 0px 0px;
+  }
+.container{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.columns{
+  width: 80%;
+  margin: 0px;
+}
+}

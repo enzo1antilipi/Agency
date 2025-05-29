@@ -45,7 +45,10 @@ export default function Home() {
               autoPlay
               muted
               loop
-              playsInline></video>
+              playsInline
+              preload="auto"
+              poster="/home.png"
+              ></video>
             <div className={styles.overlay}></div>
         <div className={styles.content}>
           <h1 className={poppins.className} style={{fontSize:"40px"}}>Transformamos ideas en experiencias digitales únicas</h1>
@@ -106,12 +109,7 @@ export default function Home() {
 
           <div className={styles.projectsContainer}>
             {/* Tarjeta 1 */}
-            <motion.div className={`${styles.projectCard} ${inter.className}`}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(0,255,255,0.3)' }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      viewport={{ once: true }}>
+            <div className={styles.projectCard} >
               <img src="/proyecto1.jpg" alt="Proyecto 1" className={styles.projectImage} />
               <div className={styles.projectInfo}>
                 <h2 className={inter.className}>Webs</h2>
@@ -119,7 +117,7 @@ export default function Home() {
                 <p className={inter.className} style={{fontSize:"16px"}} > Creamos sitios web a medida para potenciar tu negocio o perfil profesional, adaptados a tus objetivos y con tecnología moderna.</p>
                  
               </div>
-            </motion.div>
+            </div>
 
             {/* Tarjeta 2 */}
             <div className={styles.projectCard}>
