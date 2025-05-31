@@ -12,9 +12,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// export const metadata = {
+//   title: "Pixel&Code | Desarrollo Web y Software a Medida",
+//   description: "Agencia digital especializada en diseño web creativo y desarrollo de software a medida.",
+// };
 export const metadata = {
   title: "Pixel&Code | Desarrollo Web y Software a Medida",
   description: "Agencia digital especializada en diseño web creativo y desarrollo de software a medida.",
+  keywords: ["diseño web", "desarrollo software", "automatización", "PixelyCode", "agencia digital"],
+  authors: [{ name: "PixelyCode", url: "https://pixelycode.com" }],
+  openGraph: {
+    title: "Pixel&Code",
+    description: "Diseño web y desarrollo de software a medida.",
+    url: "https://pixelycode.com",
+    siteName: "Pixel&Code",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pixel&Code - Diseño Web",
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -172,6 +172,68 @@
     background-color: #4978C7;
   }
 
+/* ---------Prueba---- */
+.SectionService {
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.sliderWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  width: 100%;
+  margin: auto;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.box {
+  min-width: 50px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #000;
+}
+
+.subtitulo {
+  color: rgba(124, 124, 124, 1);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-top: 0;
+}
 
 /* --------------- */
 .SectionAbout{
