@@ -75,6 +75,7 @@
 }
 .SectionService h1{
   color: black;
+  ;
 }
 
 .boxContainer{
@@ -96,6 +97,8 @@
   text-align: center;
   color: var(--Par-Color, rgba(124, 124, 124, 1));
 }
+
+
   /* Modal para desktop */
   .modalOverlay {
     position: fixed;
@@ -234,7 +237,34 @@
   font-size: 2rem;
   margin-top: 0;
 }
+@media (max-width: 768px) {
+  
+  .SectionService{
+    width: 90%;
+    margin: auto;
+    
+  }
+  .sliderWrapper {
+    width: 100%;
+    margin-left: -50px;
+    display: flex;
+  }
+  .slider {
+    width: 100%;
+  }
 
+  .box {
+
+    max-width: 5px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .arrow {
+    padding: 5px;
+    font-size: 1.2rem;
+  }
+}
 /* --------------- */
 .SectionAbout{
   height: auto;
@@ -552,7 +582,7 @@
 
   .buttonContainer {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 10px;
     width: 100%;
@@ -578,10 +608,10 @@
   }
   .content {
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 25%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: start;
     color: white;
     width: 80%;
   }
@@ -605,7 +635,7 @@
   }
 
   .box {
-    width: 90%;
+    width: 80%;
     max-width: 300px;
     height: auto;
     padding: 20px;
@@ -765,7 +795,12 @@
     typewriter 5s steps(50) 1s 1 normal both, 
     blinkingCursor 500ms steps(50) infinite normal;
 }
-
+.typewriterAnimationMobile {
+  display: none;
+}
+.cursorMobile {
+  display: none;
+}
 @keyframes typewriter {
   from { width: 0; }
   to { width: 100%; }
@@ -777,9 +812,35 @@
 }
 @media screen and (max-width: 768px) {
 
-  .cursor{
+  .cursorMobile{
   max-width: 16ch; /* ajustá al largo de tu texto real */
-
   }
+  .cursorMobile {
+    position: relative;
+    width: auto;
+    margin: 0px ;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 17px;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    font-family: 'Anonymous Pro', monospace;
+    color: white;
+    max-width: 31ch; /* ajustá al largo de tu texto real */
+    display: block;
+    animation: 
+      typewriter 4s steps(44) 1s 1 normal both,
+      blinkingCursor 500ms steps(1) infinite normal;
+  }
+  
+  .typewriterAnimationMobile {
+    
+    animation: 
+      typewriter 5s steps(50) 1s 1 normal both, 
+      blinkingCursor 500ms steps(50) infinite normal;
+  }
+.cursor {display: none;}
+.typewriterAnimation {display: none;}
 }
 

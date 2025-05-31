@@ -109,6 +109,7 @@ const services = [
           <h1 className={poppins.className} style={{fontSize:"40px"}}>Transformamos ideas en experiencias digitales únicas</h1>
           {/* <h3 className={inter.className}>Diseño web creativo y desarrollo de software a medida para impulsar tu negocio.</h3> */}
           <p className={`${styles.cursor} ${styles.typewriterAnimation}`}>Agencia digital especializada en diseño web y desarrollo de software. </p>
+          <p className={`${styles.cursorMobile} ${styles.typewriterAnimationMobile}`}>Diseño web y software a medida.</p>
           <div className={styles.buttonContainer}>
             <Link href="/proyectswebs">
             <motion.button
