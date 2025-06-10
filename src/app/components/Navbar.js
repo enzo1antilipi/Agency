@@ -28,7 +28,7 @@ export default function Navbar(){
       <nav  className={`${styles.navbar} ${scrolling ? styles.scrolled : ""}`}>
         <div className={styles.navContainer}>
           <Link href="/" >
-              <img src="/logo2.png" alt="Proyecto 1" className={styles.projectImage} />
+              <img src="/Logo2.png" alt="Logo" className={styles.projectImage} />
                </Link>
                <button className={styles.menuToggle} onClick={toggleMenu}>
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
