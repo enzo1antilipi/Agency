@@ -20,7 +20,18 @@ export const metadata = {
   title: "Pixel&Code | Desarrollo Web y Software a Medida",
   description: "Agencia digital especializada en diseño web creativo y desarrollo de software a medida.",
   keywords: ["diseño web", "desarrollo software", "automatización", "PixelyCode", "agencia digital"],
-  authors: [{ name: "PixelyCode", url: "https://pixelycode.com" }],
+  keywords: [
+    "agencia web Puerto Madryn",
+    "desarrollo web Argentina",
+    "software a medida",
+    "creación de apps móviles",
+    "diseño web profesional",
+    "creacion de paginas web",
+    "empresa desarrollo software Patagonia",
+    "desarrolladores web Chubut",
+    "agencia digital Argentina",
+    "agencia Puerto madryn"
+  ],
   openGraph: {
     title: "Pixel&Code",
     description: "Diseño web y desarrollo de software a medida.",
