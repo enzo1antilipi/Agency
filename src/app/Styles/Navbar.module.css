@@ -18,7 +18,7 @@
 }
 .imglogo {
   width: 100px;
-  height: 50px;
+  height: 40px;
   object-fit: contain;
   max-width: 120px;
   
@@ -32,8 +32,8 @@
 }
 
 .projectImage{
-  max-height: 55px;
-  margin-left: 30%;
+  max-height: 45px;
+  margin-left: 20%;
 }
 .scrolled {
   background: rgba(255, 255, 255, ); /* Aumenta la opacidad al hacer scroll */
@@ -45,7 +45,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* max-width: 1200px; */
+  max-width: 90%;
 }
 
 .navLinks {
@@ -73,7 +73,7 @@
   text-decoration: none;
   color: rgb(65, 65, 65);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
     
 }
 
