@@ -19,7 +19,6 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Pixel&Code | Desarrollo Web y Software a Medida",
   description: "Agencia digital especializada en diseño web creativo y desarrollo de software a medida.",
-  keywords: ["diseño web", "desarrollo software", "automatización", "PixelyCode", "agencia digital"],
   keywords: [
     "agencia web Puerto Madryn",
     "desarrollo web Argentina",
@@ -60,7 +59,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar/>
         {children}
